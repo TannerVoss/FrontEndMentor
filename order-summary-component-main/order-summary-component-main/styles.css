@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desatured-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    /* border: border-box= box will shrink to fit border*/
+}
+
+img {
+    max-width: 100%;
+    /* image will not be larger than window*/
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--pale-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--desatured-blue);
+}
+
+Button {
+    font-family: inherit;
+}
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn-change {
+    background-color: transparent;
+    color: var(--bright-blue);
+    text-decoration: underline;
+    padding: auto;
+}
+
+.btn-primary {
+    background-color: var(--bright-blue);
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-primary:hover,
+.btn-change:hover {
+    opacity: .65;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--desatured-blue);
+    padding: 10px;
+}
+
+.btn-secondary:hover {
+    color: hsl(223, 47%, 23%)
+}
+
+.bg__image {
+    background: url('./images/pattern-background-mobile.svg') no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container {
+    background-color: white;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px hsl(228, 45%, 44% 0.15);
+}
+
+.container p.description {
+    padding: 0px 35px;
+}
+
+.container img.hero {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.container .pricing {
+    /*Div class="pricing"*/
+    margin: 25px auto;
+    padding: 10px;
+    background-color: var(--very-pale-blue);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.container .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*alligns on top of eachother*/
+    text-align: center;
+    width: 90%;
+}
+
+.container .pricing article {
+    display: flex;
+    align-items: center;
+    padding: 1px;
+}
+
+.container .pricing article img {
+    padding: 0px 30px 0px 8px;
+}
+
+.container h1 {
+    color: hsl(223, 47%, 23%);
+    margin: 10px 0px;
+}
+
+
+/* atrribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 769px) {
+    .bg__image {
+        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+        height: 50vh;
+    }
+    .container {
+        width: 500px;
+    }
+}
